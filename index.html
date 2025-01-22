@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="java.js">
+<link rel="stylesheet" href="style.css">
+<input type="range" id="durationSlider" min="0.25" max="16" step="0.25" value="3">
+<input type="range" id="rowColSlider" min="1" max="20" step="1" value="8">
+
+<div class="offsetVal"><span>3</span> sec</div>
+<div class="rowColVal"><span>8</span></div>
+
+<button id="randCol">Color Wheel</button>
+
+<svg viewBox="0 0 100 100" id="hexy">
+	<pattern id="hexagons" viewBox="0 0 100 100" width="12.5%" height="12.5%">
+		<path d="M 50 50 v -44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="a0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="0s" repeatCount="indefinite" fill="freeze" />
+		</path>
+		<path d="M 50 50 l 18.4 -44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="b0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-0.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l 31.4 -31.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="c0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-1s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l 44.4 -18.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="d0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-1.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 h 44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="e0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-2s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l 44.4 18.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="f0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-2.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l 31.4 31.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="g0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-3s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l 18.4 44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="h0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-3.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 v 44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="i0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-4s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l -18.4 44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="j0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-4.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l -31.4 31.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="k0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l -44.4 18.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="l0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-5.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 h -44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="m0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-6s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l -44.4 -18.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="n0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-6.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l -31.4 -31.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="o0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-7s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 l -18.4 -44.4" fill="none" stroke="#fff" stroke-dasharray="49" stroke-dashoffset="49">
+			<animate id="p0" attributeName="stroke-dashoffset" values="49;0;-49" dur="3s" begin="-7.5s" repeatCount="indefinite" />
+		</path>
+		<path d="M 50 50 m -18.4 -44.4 h 36.8 l 26 26 v 36.8 l -26 26 h -36.8 l -26 -26 v -36.8 Z" fill="none" stroke="#fff" stroke-width="2" />
+	</pattern>
+	<rect height="100%" width="100%" fill="url(#hexagons)" stroke="none" />
+</svg>

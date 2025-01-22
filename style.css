@@ -1,0 +1,63 @@
+body {
+	margin: 0 auto;
+	background: #111;
+}
+svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	stroke-linecap: round;
+	max-width: 400px;
+	stroke: #fff;
+}
+#durationSlider {
+	position: absolute;
+	width: 95%;
+	left: 50%;
+	top: 10px;
+	transform: translate(-50%);
+	max-width: 400px;
+}
+#rowColSlider {
+	position: absolute;
+	width: 95%;
+	left: 50%;
+	top: 50px;
+	transform: translate(-50%);
+	max-width: 400px;
+}
+.offsetVal,
+.rowColVal {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translate(-50%);
+	user-select: none;
+	pointer-events: none;
+	color: #fff;
+}
+.rowColVal {
+	top: 70px;
+}
+#randCol {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	color: #fff;
+	background: none;
+	border: 2px solid #fff;
+	padding: 5px 10px 5px 10px;
+	font-family: "Roboto", sans-serif;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#randCol:hover {
+	border-color: steelblue;
+	color: steelblue;
+}
+#randCol:active {
+	border-color: #0ff;
+	color: #0ff;
+}
